@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 import './Cart.css'
-const Cart = ({selectedActors}) => {
+const Cart = ({selectedActors,remaining, totalCost}) => {
     console.log(selectedActors)
     
     return (
         <div>
-           <h5>Total actors:{selectedActors.length}</h5> 
+           <h3>Total actors:{selectedActors.length}</h3> 
+           <h5>Remaining:{remaining}</h5>
+           <h5>Total Cost:{totalCost}</h5>
            {selectedActors.map((actor) => (
         <li key={actor.id}>{actor.name}</li>
       ))}
