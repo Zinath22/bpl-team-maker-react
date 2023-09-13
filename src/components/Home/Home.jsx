@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import './Home.css'
 import { useState } from 'react';
 import Cart from '../Cart/Cart';
+// import Swal from 'sweetalert2/src/sweetalert2.js'
 
 const Home = () => {
     const [allActors, setAllActors] =   useState([])
@@ -31,7 +32,7 @@ const Home = () => {
     const totalRemaining = 20000 - count;
   
     if (count > 20000) {
-    return alert("taka sesh");
+        return alert ("taka sesh")
     }
     else {
         setTotalCost(count);
