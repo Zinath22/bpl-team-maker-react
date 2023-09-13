@@ -16,10 +16,15 @@ const Home = () => {
     }, []);
 
     const  handleSelectActor = (actor) =>  {
-    
+    const isExist = selectedActors.find(item => item.id == actor.id)
+  if (isExist) {
+    alert("already booked")
+  } else {
     setSelectedActors([...selectedActors, actor])
+  }
+    
     };
-    console.log(selectedActors);
+    // console.log(selectedActors);
     // console.log(allActors)
 
     
